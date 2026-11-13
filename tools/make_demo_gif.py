@@ -8,7 +8,7 @@ import sys
 
 from PIL import Image, ImageDraw, ImageFont
 
-USER = sys.argv[1] if len(sys.argv) > 1 else "USERNAME"
+USER = sys.argv[1] if len(sys.argv) > 1 else "jbasoft"
 OUT = sys.argv[2] if len(sys.argv) > 2 else "/home/claude/claude-vault-demo.gif"
 
 W, H = 900, 540
