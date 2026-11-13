@@ -1,0 +1,67 @@
+{
+  "dialog.title": "claude-vault",
+  "dialog.heading": "مطلوب بيانات اعتماد",
+  "dialog.subtitle": "أدخل قيمة «{name}». تُخزَّن محليًا ولا تُعرض أبدًا على وكيل الذكاء الاصطناعي.",
+  "dialog.username": "اسم المستخدم",
+  "dialog.secret": "القيمة",
+  "dialog.confirm": "تأكيد القيمة",
+  "dialog.show": "إظهار الأحرف",
+  "dialog.save": "حفظ",
+  "dialog.cancel": "إلغاء",
+  "dialog.empty": "لا يمكن أن تكون القيمة فارغة.",
+  "dialog.footer": "ما تكتبه هنا لا يدخل المحادثة ولا السجل ولا أي طلب يُرسل إلى النموذج.",
+
+  "error.cancelled": "أُلغي من قِبل المستخدم.",
+  "error.mismatch": "القيمتان غير متطابقتين.",
+  "error.empty_stdin": "لم تصل أي قيمة من الإدخال القياسي.",
+  "error.no_prompt": "لا توجد وسيلة للسؤال: لا شاشة رسومية ولا طرفية. استخدم ‎--stdin أو شغّل الأمر داخل طرفية.",
+
+  "init.done": "الخزنة جاهزة في {path} (الواجهة الخلفية: {backend}).",
+  "init.file_backend": "لم يُعثر على مخزن مفاتيح لنظام التشغيل، لذلك تُحفظ الأسرار في ملف مُعمّى. ثبّت حزمة keyring لاستخدام مخزن بيانات الاعتماد في النظام.",
+
+  "set.exists": "«{name}» موجود بالفعل. استخدم ‎--force للاستبدال.",
+  "set.saved": "حُفظ «{name}» ({backend}).",
+
+  "need.ok": "كلها موجودة: {names}",
+  "need.missing": "غير موجود: {names}",
+  "need.prompting": "يجري سؤال المستخدم عن: {names}",
+
+  "list.empty": "لا توجد أسرار في الملف الشخصي «{profile}» بعد.",
+  "list.header": "{count} سر في الملف الشخصي «{profile}» ({backend}):",
+
+  "get.blocked_agent": "مرفوض: يبدو أن {agent} هو من يشغّل هذا، وطباعة القيمة ستضعها في السجل. استخدم vault run بدلًا من ذلك.",
+  "get.needs_reveal": "مرفوض: أضف ‎--reveal لطباعة القيمة في الطرفية.",
+
+  "rm.missing": "لا يوجد سر بالاسم «{name}».",
+  "rm.done": "حُذف «{name}».",
+  "rename.done": "أُعيدت تسمية «{old}» إلى «{new}».",
+
+  "run.missing": "غير موجود في الخزنة: {name}. شغّل «vault need {name}» أولًا.",
+  "run.no_command": "لا شيء لتشغيله. الاستخدام: vault run NAME -- command args",
+  "run.not_found": "الأمر غير موجود: {cmd}",
+
+  "env.written": "كُتبت {count} قيمة إلى {path} بأذونات 0600.",
+  "env.blocked_agent": "مرفوض: يبدو أن {agent} هو من يشغّل هذا. استخدم ‎--to FILE أو vault run.",
+  "env.needs_flag": "مرفوض: طباعة القيم إلى الإخراج القياسي تتطلب ‎--unsafe-stdout. يُفضَّل ‎--to FILE أو vault run.",
+  "env.gitignore": "تحذير: «{name}» غير مُدرج في {path}. أضفه قبل الإيداع.",
+
+  "template.no_input": "القالب غير موجود: {path}",
+  "template.no_placeholders": "لم يُعثر على أي عنصر نائب ‎${{VAULT:NAME}} في {path}",
+  "template.done": "عُوِّض {count} عنصر نائب في {path} ({names}).",
+
+  "doctor.header": "حالة claude-vault",
+  "doctor.ok": "كل شيء يبدو سليمًا.",
+  "doctor.no_key": "الفهرس يسرد أسرارًا لكن لم يُعثر على ملف مفتاح؛ قد تكون القيم غير قابلة للقراءة.",
+  "doctor.key_perms": "أذونات ملف المفتاح هي {mode}؛ ينبغي أن تكون 0o600.",
+  "doctor.no_hook": "خُطّاف الحماية الخاص بـ Claude Code غير مثبّت. شغّل «vault install-claude».",
+
+  "install.skill": "المهارة: {path}",
+  "install.skill_exists": "المهارة موجودة بالفعل في {path} (استخدم ‎--force للكتابة فوقها)",
+  "install.hook": "خُطّاف الحماية: {path}",
+  "install.settings": "دُمجت الإعدادات: {path}",
+  "install.done": "تم التثبيت. مجلد الخزنة: {vault}",
+  "install.next": "الخطوة التالية: أعد تشغيل Claude Code ثم جرّب «vault need MY_API_KEY».",
+
+  "lang.current": "اللغة الحالية: {code}. المتاح:",
+  "lang.set": "ضُبطت اللغة على {code}."
+}

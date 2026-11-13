@@ -1,0 +1,67 @@
+{
+  "dialog.title": "claude-vault",
+  "dialog.heading": "Bir kimlik bilgisi gerekiyor",
+  "dialog.subtitle": "“{name}” için değeri girin. Yerelde saklanır ve yapay zekâ ajanına asla gösterilmez.",
+  "dialog.username": "Kullanıcı adı",
+  "dialog.secret": "Değer",
+  "dialog.confirm": "Doğrula",
+  "dialog.show": "Karakterleri göster",
+  "dialog.save": "Kaydet",
+  "dialog.cancel": "Vazgeç",
+  "dialog.empty": "Değer boş olamaz.",
+  "dialog.footer": "Buraya yazdığınız şey konuşmaya, döküme ya da modele giden hiçbir isteğe girmez.",
+
+  "error.cancelled": "Kullanıcı tarafından iptal edildi.",
+  "error.mismatch": "İki değer birbiriyle eşleşmiyor.",
+  "error.empty_stdin": "Standart girişten değer alınmadı.",
+  "error.no_prompt": "Sorma yolu yok: ne grafik ekran ne de terminal var. --stdin kullanın ya da bunu bir terminalde çalıştırın.",
+
+  "init.done": "Kasa {path} konumunda hazır (arka uç: {backend}).",
+  "init.file_backend": "İşletim sistemi anahtarlığı bulunamadı, bu yüzden sırlar şifreli bir dosyada tutuluyor. Sistemin kimlik bilgisi deposunu kullanmak için keyring paketini kurun.",
+
+  "set.exists": "“{name}” zaten var. Değiştirmek için --force ekleyin.",
+  "set.saved": "“{name}” kaydedildi ({backend}).",
+
+  "need.ok": "Hepsi mevcut: {names}",
+  "need.missing": "Eksik: {names}",
+  "need.prompting": "Kullanıcıdan isteniyor: {names}",
+
+  "list.empty": "“{profile}” profilinde henüz sır yok.",
+  "list.header": "“{profile}” profilinde {count} sır ({backend}):",
+
+  "get.blocked_agent": "Reddedildi: bunu {agent} çalıştırıyor görünüyor ve değeri yazdırmak onu döküme sokar. Bunun yerine vault run kullanın.",
+  "get.needs_reveal": "Reddedildi: bir değeri terminale yazdırmak için --reveal ekleyin.",
+
+  "rm.missing": "“{name}” adında bir sır yok.",
+  "rm.done": "“{name}” silindi.",
+  "rename.done": "“{old}”, “{new}” olarak yeniden adlandırıldı.",
+
+  "run.missing": "Kasada yok: {name}. Önce “vault need {name}” çalıştırın.",
+  "run.no_command": "Çalıştırılacak bir şey yok. Kullanım: vault run NAME -- komut argümanlar",
+  "run.not_found": "Komut bulunamadı: {cmd}",
+
+  "env.written": "{count} değer 0600 izinleriyle {path} dosyasına yazıldı.",
+  "env.blocked_agent": "Reddedildi: bunu {agent} çalıştırıyor görünüyor. --to DOSYA ya da vault run kullanın.",
+  "env.needs_flag": "Reddedildi: değerleri standart çıktıya yazdırmak --unsafe-stdout gerektirir. --to DOSYA ya da vault run tercih edin.",
+  "env.gitignore": "Uyarı: “{name}” {path} içinde yok. Commit'ten önce ekleyin.",
+
+  "template.no_input": "Şablon bulunamadı: {path}",
+  "template.no_placeholders": "{path} içinde ${{VAULT:NAME}} yer tutucusu bulunamadı",
+  "template.done": "{path} içinde {count} yer tutucu dolduruldu ({names}).",
+
+  "doctor.header": "claude-vault durumu",
+  "doctor.ok": "Her şey yolunda görünüyor.",
+  "doctor.no_key": "Dizin sırları listeliyor ama anahtar dosyası bulunamadı; değerler okunamayabilir.",
+  "doctor.key_perms": "Anahtar dosyasının izinleri {mode}; 0o600 olmalı.",
+  "doctor.no_hook": "Claude Code koruma kancası kurulu değil. “vault install-claude” çalıştırın.",
+
+  "install.skill": "Skill: {path}",
+  "install.skill_exists": "Skill zaten {path} konumunda var (üzerine yazmak için --force)",
+  "install.hook": "Koruma kancası: {path}",
+  "install.settings": "Ayarlar birleştirildi: {path}",
+  "install.done": "Kuruldu. Kasa dizini: {vault}",
+  "install.next": "Sıradaki adım: Claude Code'u yeniden başlatın, sonra “vault need MY_API_KEY” deneyin.",
+
+  "lang.current": "Geçerli dil: {code}. Mevcut olanlar:",
+  "lang.set": "Dil {code} olarak ayarlandı."
+}

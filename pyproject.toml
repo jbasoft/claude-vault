@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claude-vault"
+version = "0.3.0"
+description = "Secrets for AI coding agents: the agent knows the name, never the value."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Javad Bahmanabadi" }]
+keywords = [
+  "claude", "claude-code", "ai-agent", "secrets", "credentials",
+  "keyring", "dotenv", "security", "cli", "skill", "mcp",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Security",
+  "Topic :: Software Development :: Build Tools",
+]
+dependencies = [
+  "keyring>=24.0",
+  "cryptography>=41.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "ruff>=0.5"]
+
+[project.urls]
+Homepage = "https://github.com/jbasoft/claude-vault"
+Issues = "https://github.com/jbasoft/claude-vault/issues"
+
+[project.scripts]
+vault = "claude_vault.cli:main"
+claude-vault = "claude_vault.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+claude_vault = ["locales/*.json", "skill/*.md", "hooks/*.py"]
+
+[tool.ruff]
+line-length = 96
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "C4"]
+# The guard hook and the prompt fallbacks are deliberately fail-open: a broad
+# except there is the design, not an oversight.
+ignore = [
+  "E501",    # long lines are caught by review, not by the linter
+  "SIM105",  # try/except/pass reads better than contextlib.suppress here
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

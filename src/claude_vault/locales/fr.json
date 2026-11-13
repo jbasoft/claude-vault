@@ -1,0 +1,67 @@
+{
+  "dialog.title": "claude-vault",
+  "dialog.heading": "Un identifiant est requis",
+  "dialog.subtitle": "Saisissez la valeur de « {name} ». Elle est stockée localement et n'est jamais montrée à l'agent IA.",
+  "dialog.username": "Nom d'utilisateur",
+  "dialog.secret": "Valeur",
+  "dialog.confirm": "Confirmer",
+  "dialog.show": "Afficher les caractères",
+  "dialog.save": "Enregistrer",
+  "dialog.cancel": "Annuler",
+  "dialog.empty": "La valeur ne peut pas être vide.",
+  "dialog.footer": "Ce que vous saisissez ici n'entre ni dans la conversation, ni dans la transcription, ni dans aucune requête envoyée au modèle.",
+
+  "error.cancelled": "Annulé par l'utilisateur.",
+  "error.mismatch": "Les deux valeurs ne correspondent pas.",
+  "error.empty_stdin": "Aucune valeur reçue sur l'entrée standard.",
+  "error.no_prompt": "Impossible de demander la valeur : ni affichage graphique ni terminal. Utilisez --stdin ou lancez la commande dans un terminal.",
+
+  "init.done": "Coffre prêt dans {path} (backend : {backend}).",
+  "init.file_backend": "Aucun trousseau système trouvé : les secrets sont conservés dans un fichier chiffré. Installez le paquet keyring pour utiliser le gestionnaire d'identifiants du système.",
+
+  "set.exists": "« {name} » existe déjà. Ajoutez --force pour le remplacer.",
+  "set.saved": "« {name} » enregistré ({backend}).",
+
+  "need.ok": "Tous présents : {names}",
+  "need.missing": "Manquant : {names}",
+  "need.prompting": "Demande à l'utilisateur pour : {names}",
+
+  "list.empty": "Aucun secret dans le profil « {profile} » pour l'instant.",
+  "list.header": "{count} secret(s) dans le profil « {profile} » ({backend}) :",
+
+  "get.blocked_agent": "Refusé : {agent} semble exécuter cette commande, et afficher la valeur la placerait dans la transcription. Utilisez plutôt vault run.",
+  "get.needs_reveal": "Refusé : ajoutez --reveal pour afficher une valeur dans le terminal.",
+
+  "rm.missing": "Aucun secret nommé « {name} ».",
+  "rm.done": "« {name} » supprimé.",
+  "rename.done": "« {old} » renommé en « {new} ».",
+
+  "run.missing": "Absent du coffre : {name}. Lancez d'abord « vault need {name} ».",
+  "run.no_command": "Rien à exécuter. Usage : vault run NAME -- commande arguments",
+  "run.not_found": "Commande introuvable : {cmd}",
+
+  "env.written": "{count} valeur(s) écrite(s) dans {path} avec les permissions 0600.",
+  "env.blocked_agent": "Refusé : {agent} semble exécuter cette commande. Utilisez --to FICHIER ou vault run.",
+  "env.needs_flag": "Refusé : afficher les valeurs sur la sortie standard exige --unsafe-stdout. Préférez --to FICHIER ou vault run.",
+  "env.gitignore": "Attention : « {name} » ne figure pas dans {path}. Ajoutez-le avant de committer.",
+
+  "template.no_input": "Modèle introuvable : {path}",
+  "template.no_placeholders": "Aucun espace réservé ${{VAULT:NAME}} trouvé dans {path}",
+  "template.done": "{count} espace(s) réservé(s) remplacé(s) dans {path} ({names}).",
+
+  "doctor.header": "État de claude-vault",
+  "doctor.ok": "Tout semble correct.",
+  "doctor.no_key": "L'index liste des secrets mais aucun fichier de clé n'a été trouvé ; les valeurs peuvent être illisibles.",
+  "doctor.key_perms": "Les permissions du fichier de clé sont {mode} ; elles devraient être 0o600.",
+  "doctor.no_hook": "Le hook de protection pour Claude Code n'est pas installé. Lancez « vault install-claude ».",
+
+  "install.skill": "Skill : {path}",
+  "install.skill_exists": "Skill déjà présent dans {path} (utilisez --force pour écraser)",
+  "install.hook": "Hook de protection : {path}",
+  "install.settings": "Paramètres fusionnés : {path}",
+  "install.done": "Installé. Répertoire du coffre : {vault}",
+  "install.next": "Ensuite : redémarrez Claude Code, puis essayez « vault need MY_API_KEY ».",
+
+  "lang.current": "Langue actuelle : {code}. Disponibles :",
+  "lang.set": "Langue réglée sur {code}."
+}

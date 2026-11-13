@@ -1,0 +1,67 @@
+{
+  "dialog.title": "claude-vault",
+  "dialog.heading": "Se necesita una credencial",
+  "dialog.subtitle": "Introduce el valor de «{name}». Se guarda localmente y nunca se muestra al agente de IA.",
+  "dialog.username": "Usuario",
+  "dialog.secret": "Valor",
+  "dialog.confirm": "Confirmar",
+  "dialog.show": "Mostrar caracteres",
+  "dialog.save": "Guardar",
+  "dialog.cancel": "Cancelar",
+  "dialog.empty": "El valor no puede estar vacío.",
+  "dialog.footer": "Lo que escribas aquí no entra en la conversación, ni en la transcripción, ni en ninguna petición enviada al modelo.",
+
+  "error.cancelled": "Cancelado por el usuario.",
+  "error.mismatch": "Los dos valores no coinciden.",
+  "error.empty_stdin": "No se recibió ningún valor por la entrada estándar.",
+  "error.no_prompt": "No hay forma de preguntar: ni pantalla gráfica ni terminal. Usa --stdin o ejecuta esto en una terminal.",
+
+  "init.done": "Bóveda lista en {path} (backend: {backend}).",
+  "init.file_backend": "No se encontró un llavero del sistema, así que los secretos se guardan en un archivo cifrado. Instala el paquete keyring para usar el almacén de credenciales del sistema.",
+
+  "set.exists": "«{name}» ya existe. Añade --force para reemplazarlo.",
+  "set.saved": "«{name}» guardado ({backend}).",
+
+  "need.ok": "Todos presentes: {names}",
+  "need.missing": "Faltan: {names}",
+  "need.prompting": "Pidiendo al usuario: {names}",
+
+  "list.empty": "Aún no hay secretos en el perfil «{profile}».",
+  "list.header": "{count} secreto(s) en el perfil «{profile}» ({backend}):",
+
+  "get.blocked_agent": "Rechazado: parece que {agent} está ejecutando esto, e imprimir el valor lo dejaría en la transcripción. Usa vault run en su lugar.",
+  "get.needs_reveal": "Rechazado: añade --reveal para imprimir un valor en la terminal.",
+
+  "rm.missing": "No existe ningún secreto llamado «{name}».",
+  "rm.done": "«{name}» eliminado.",
+  "rename.done": "«{old}» renombrado a «{new}».",
+
+  "run.missing": "No está en la bóveda: {name}. Ejecuta primero «vault need {name}».",
+  "run.no_command": "No hay nada que ejecutar. Uso: vault run NAME -- comando argumentos",
+  "run.not_found": "Comando no encontrado: {cmd}",
+
+  "env.written": "Se escribieron {count} valor(es) en {path} con permisos 0600.",
+  "env.blocked_agent": "Rechazado: parece que {agent} está ejecutando esto. Usa --to ARCHIVO o vault run.",
+  "env.needs_flag": "Rechazado: imprimir valores por la salida estándar requiere --unsafe-stdout. Mejor --to ARCHIVO o vault run.",
+  "env.gitignore": "Aviso: «{name}» no está en {path}. Añádelo antes de hacer commit.",
+
+  "template.no_input": "Plantilla no encontrada: {path}",
+  "template.no_placeholders": "No se encontraron marcadores ${{VAULT:NAME}} en {path}",
+  "template.done": "Se sustituyeron {count} marcador(es) en {path} ({names}).",
+
+  "doctor.header": "Estado de claude-vault",
+  "doctor.ok": "Todo parece correcto.",
+  "doctor.no_key": "El índice lista secretos pero no se encontró el archivo de clave; puede que los valores no se puedan leer.",
+  "doctor.key_perms": "Los permisos del archivo de clave son {mode}; deberían ser 0o600.",
+  "doctor.no_hook": "El hook de protección de Claude Code no está instalado. Ejecuta «vault install-claude».",
+
+  "install.skill": "Skill: {path}",
+  "install.skill_exists": "El skill ya existe en {path} (usa --force para sobrescribir)",
+  "install.hook": "Hook de protección: {path}",
+  "install.settings": "Ajustes combinados: {path}",
+  "install.done": "Instalado. Directorio de la bóveda: {vault}",
+  "install.next": "Siguiente paso: reinicia Claude Code y prueba «vault need MY_API_KEY».",
+
+  "lang.current": "Idioma actual: {code}. Disponibles:",
+  "lang.set": "Idioma establecido en {code}."
+}

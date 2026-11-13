@@ -1,0 +1,67 @@
+{
+  "dialog.title": "claude-vault",
+  "dialog.heading": "به یک اعتبارنامه نیاز است",
+  "dialog.subtitle": "مقدار «{name}» را وارد کنید. به‌صورت محلی ذخیره می‌شود و هرگز به عامل هوش مصنوعی نشان داده نمی‌شود.",
+  "dialog.username": "نام کاربری",
+  "dialog.secret": "مقدار",
+  "dialog.confirm": "تکرار مقدار",
+  "dialog.show": "نمایش کاراکترها",
+  "dialog.save": "ذخیره",
+  "dialog.cancel": "انصراف",
+  "dialog.empty": "مقدار نمی‌تواند خالی باشد.",
+  "dialog.footer": "آنچه اینجا می‌نویسید وارد گفت‌وگو، فایل transcript یا درخواستی که به مدل فرستاده می‌شود نمی‌گردد.",
+
+  "error.cancelled": "توسط کاربر لغو شد.",
+  "error.mismatch": "دو مقدار یکسان نیستند.",
+  "error.empty_stdin": "هیچ مقداری از ورودی استاندارد دریافت نشد.",
+  "error.no_prompt": "راهی برای پرسیدن نیست: نه نمایشگر گرافیکی هست نه ترمینال. از ‎--stdin استفاده کنید یا این دستور را در ترمینال اجرا کنید.",
+
+  "init.done": "مخزن در {path} آماده است (backend: {backend}).",
+  "init.file_backend": "کلیدخان سیستم‌عامل پیدا نشد، پس اعتبارنامه‌ها در یک فایل رمزنگاری‌شده نگه داشته می‌شوند. برای استفاده از credential store سیستم، بستهٔ keyring را نصب کنید.",
+
+  "set.exists": "«{name}» از قبل وجود دارد. برای جایگزینی ‎--force بدهید.",
+  "set.saved": "«{name}» ذخیره شد ({backend}).",
+
+  "need.ok": "همه موجودند: {names}",
+  "need.missing": "موجود نیست: {names}",
+  "need.prompting": "در حال پرسیدن از کاربر برای: {names}",
+
+  "list.empty": "هنوز هیچ اعتبارنامه‌ای در پروفایل «{profile}» نیست.",
+  "list.header": "{count} اعتبارنامه در پروفایل «{profile}» ({backend}):",
+
+  "get.blocked_agent": "رد شد: به‌نظر می‌رسد {agent} این را اجرا می‌کند و چاپ مقدار آن را وارد transcript می‌کند. به‌جایش از vault run استفاده کنید.",
+  "get.needs_reveal": "رد شد: برای چاپ مقدار در ترمینال، ‎--reveal بدهید.",
+
+  "rm.missing": "اعتبارنامه‌ای با نام «{name}» وجود ندارد.",
+  "rm.done": "«{name}» حذف شد.",
+  "rename.done": "«{old}» به «{new}» تغییر نام یافت.",
+
+  "run.missing": "در مخزن نیست: {name}. اول «vault need {name}» را اجرا کنید.",
+  "run.no_command": "چیزی برای اجرا داده نشده. شیوهٔ استفاده: vault run NAME -- command args",
+  "run.not_found": "دستور پیدا نشد: {cmd}",
+
+  "env.written": "{count} مقدار با دسترسی 0600 در {path} نوشته شد.",
+  "env.blocked_agent": "رد شد: به‌نظر می‌رسد {agent} این را اجرا می‌کند. از ‎--to FILE یا vault run استفاده کنید.",
+  "env.needs_flag": "رد شد: چاپ مقادیر در خروجی استاندارد به ‎--unsafe-stdout نیاز دارد. ‎--to FILE یا vault run بهتر است.",
+  "env.gitignore": "هشدار: «{name}» در {path} نیست. پیش از commit اضافه‌اش کنید.",
+
+  "template.no_input": "قالب پیدا نشد: {path}",
+  "template.no_placeholders": "هیچ جای‌نگهدار ${{VAULT:NAME}} در {path} پیدا نشد",
+  "template.done": "{count} جای‌نگهدار در {path} جایگذاری شد ({names}).",
+
+  "doctor.header": "وضعیت claude-vault",
+  "doctor.ok": "همه‌چیز درست به‌نظر می‌رسد.",
+  "doctor.no_key": "فهرست، اعتبارنامه دارد ولی فایل کلید پیدا نشد؛ ممکن است مقادیر قابل خواندن نباشند.",
+  "doctor.key_perms": "دسترسی فایل کلید {mode} است؛ باید 0o600 باشد.",
+  "doctor.no_hook": "هوک محافظ Claude Code نصب نیست. «vault install-claude» را اجرا کنید.",
+
+  "install.skill": "اسکیل: {path}",
+  "install.skill_exists": "اسکیل از قبل در {path} هست (برای بازنویسی ‎--force بدهید)",
+  "install.hook": "هوک محافظ: {path}",
+  "install.settings": "تنظیمات ادغام شد: {path}",
+  "install.done": "نصب شد. مسیر مخزن: {vault}",
+  "install.next": "گام بعد: Claude Code را دوباره باز کنید، بعد «vault need MY_API_KEY» را امتحان کنید."
+  ,
+  "lang.current": "زبان فعلی: {code}. زبان‌های موجود:",
+  "lang.set": "زبان روی {code} تنظیم شد."
+}

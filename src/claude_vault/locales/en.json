@@ -1,0 +1,67 @@
+{
+  "dialog.title": "claude-vault",
+  "dialog.heading": "A credential is needed",
+  "dialog.subtitle": "Enter the value for “{name}”. It is stored locally and is never shown to the AI agent.",
+  "dialog.username": "Username",
+  "dialog.secret": "Value",
+  "dialog.confirm": "Confirm",
+  "dialog.show": "Show characters",
+  "dialog.save": "Save",
+  "dialog.cancel": "Cancel",
+  "dialog.empty": "The value cannot be empty.",
+  "dialog.footer": "What you type here does not enter the conversation, the transcript, or any request sent to the model.",
+
+  "error.cancelled": "Cancelled by the user.",
+  "error.mismatch": "The two values do not match.",
+  "error.empty_stdin": "No value received on stdin.",
+  "error.no_prompt": "No way to prompt: no graphical display and no terminal. Use --stdin, or run this in a terminal.",
+
+  "init.done": "Vault ready at {path} (backend: {backend}).",
+  "init.file_backend": "No OS keyring was found, so secrets are kept in an encrypted file. Install the 'keyring' package to use the system credential store instead.",
+
+  "set.exists": "“{name}” already exists. Pass --force to replace it.",
+  "set.saved": "Stored “{name}” ({backend}).",
+
+  "need.ok": "All present: {names}",
+  "need.missing": "Missing: {names}",
+  "need.prompting": "Asking the user for: {names}",
+
+  "list.empty": "No secrets in profile “{profile}” yet.",
+  "list.header": "{count} secret(s) in profile “{profile}” ({backend}):",
+
+  "get.blocked_agent": "Refused: {agent} appears to be running this, and printing a value would put it in the transcript. Use 'vault run' instead.",
+  "get.needs_reveal": "Refused: pass --reveal to print a secret value to the terminal.",
+
+  "rm.missing": "No secret named “{name}”.",
+  "rm.done": "Deleted “{name}”.",
+  "rename.done": "Renamed “{old}” to “{new}”.",
+
+  "run.missing": "Not in the vault: {name}. Run 'vault need {name}' first.",
+  "run.no_command": "Nothing to run. Usage: vault run NAME -- command args",
+  "run.not_found": "Command not found: {cmd}",
+
+  "env.written": "Wrote {count} value(s) to {path} with 0600 permissions.",
+  "env.blocked_agent": "Refused: {agent} appears to be running this. Use --to FILE, or 'vault run'.",
+  "env.needs_flag": "Refused: printing values to stdout needs --unsafe-stdout. Prefer --to FILE or 'vault run'.",
+  "env.gitignore": "Warning: “{name}” is not in {path}. Add it before committing.",
+
+  "template.no_input": "Template not found: {path}",
+  "template.no_placeholders": "No ${{VAULT:NAME}} placeholders found in {path}",
+  "template.done": "Rendered {count} placeholder(s) into {path} ({names}).",
+
+  "doctor.header": "claude-vault status",
+  "doctor.ok": "Everything looks fine.",
+  "doctor.no_key": "The index lists secrets but no key file was found; values may be unreadable.",
+  "doctor.key_perms": "The key file permissions are {mode}; they should be 0o600.",
+  "doctor.no_hook": "The Claude Code guard hook is not installed. Run 'vault install-claude'.",
+
+  "install.skill": "Skill: {path}",
+  "install.skill_exists": "Skill already present at {path} (use --force to overwrite)",
+  "install.hook": "Guard hook: {path}",
+  "install.settings": "Settings merged: {path}",
+  "install.done": "Installed. Vault directory: {vault}",
+  "install.next": "Next: restart Claude Code, then try 'vault need MY_API_KEY'.",
+
+  "lang.current": "Current language: {code}. Available:",
+  "lang.set": "Language set to {code}."
+}

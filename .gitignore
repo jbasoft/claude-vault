@@ -1,0 +1,28 @@
+# secrets — never commit these
+.env
+.env.*
+!.env.example
+*.key
+master.key
+secrets.enc
+appsettings.Development.json
+appsettings.Production.json
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# editors / os
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
