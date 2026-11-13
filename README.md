@@ -16,6 +16,12 @@ without seeing it.
 
 </div>
 
+<div align="center">
+
+<img src="docs/media/demo.gif" alt="claude-vault demo: the agent asks for a credential, a dialog opens on your machine, the value is injected and scrubbed, and an attempt to print it is blocked" width="100%">
+
+</div>
+
 ---
 
 ## The problem
