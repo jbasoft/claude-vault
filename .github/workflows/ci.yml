@@ -14,6 +14,14 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
         python-version: ["3.9", "3.11", "3.13"]
+        exclude:
+          # ubuntu-latest is 24.04, whose tool cache no longer ships Python 3.9.
+          - os: ubuntu-latest
+            python-version: "3.9"
+        include:
+          # ...so the oldest supported Python is tested on 22.04 instead.
+          - os: ubuntu-22.04
+            python-version: "3.9"
     steps:
       - uses: actions/checkout@v4
 
